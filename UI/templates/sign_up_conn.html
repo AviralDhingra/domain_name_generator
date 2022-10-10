@@ -1,0 +1,15 @@
+{% block main %}
+
+<div class="container main-content">
+    <h1>Sign-Up Finished</h1>
+    <p> You have succesfully signed up By An ID...</p>
+    <div class="login_info">
+        <p> {{ info }} </p>
+        <!-- To Acces variable ('info'), that is passed by python function-->
+        <!-- <p>Username: {{ username }}</p> -->
+        <p>Email: {{ email }}</p>
+        <p>Password: {{ password }}</p>
+    </div>
+</div>
+
+{% endblock %}

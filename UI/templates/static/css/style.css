@@ -1,0 +1,24 @@
+article,
+aside,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+ul {
+  list-style: none;
+  -webkit-column-count: 2;
+  -webkit-column-width: 320px;
+  /* border: 1px dotted red; */
+  padding: 1em;
+  align-items: center;
+}
+li {
+  border: 1px solid;
+  padding: 0.5em;
+  align-items: center;
+}

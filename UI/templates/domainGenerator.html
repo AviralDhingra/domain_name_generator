@@ -1,0 +1,60 @@
+{% block main %}
+
+<!doctype html>
+    <head>
+        <title>Index</title>
+        <meta charset=utf-8>
+        <!-- <link rel="stylesheet" href="style.css"> -->
+        <!-- <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}"> -->
+        <style>
+            article, aside, figure, footer, header, hgroup, 
+            menu, nav, section { display: block; }
+            ul {
+                list-style: none;
+                -webkit-column-count: 2;
+                -webkit-column-width: 320px;
+                /* border: 1px dotted red; */
+                padding: 1em;
+                align-items: center;
+            }
+            li {
+                border: 1px solid;
+                padding: .5em;
+                align-items: center;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>My Website</h1>
+        <!-- <form action="/my-link/">
+            <input type="submit" value="Click me" />
+        </form> -->
+
+        <!-- <button> <a href="/my-link/">Click me</a></button> -->
+        <!-- <p> {{listOfNames}} </p> -->
+
+        <strong class="d-block mb-3">Suggested Names</strong>
+        <ul>
+            {% for i in listOfNames %}
+                <li>{{ i }}</li>
+            {% endfor %}
+        </ul>
+        <!-- <form action="" method="POST", id="test123" name="form-name" value="form1">
+            <input type="text" name="" id="" value="Test">
+            <input type="submit" name="" id="" value="Submit">
+        </form> -->
+        <form action="/domainGenerator" method="POST" id="finalDecide" name="form-name">
+            <div class="inputBox">
+                <input type="text" class="form-control" id="name_chosen" name="name_chosen" required>
+                <label for="">What Name Do You Like?</label>
+            </div>
+            <div class="inputBox">
+                <input type="text" class="form-control" id="domain" name="domain" required>
+                <label for="">What Name Do You Want?</label>
+            </div>
+            <input type="submit" name="" id="" value="Submit">
+        </form>
+
+    </body>
+
+{% endblock %}
